@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styles.css">
+    <title>Analog Clock</title>
+</head>
+<body>
+    <div class="clock">
+        <!-- class for the hands -->
+        <div class="hand hour" data-hour-hand></div>
+        <div class="hand minute" data-minute-hand></div>
+        <div class="hand second" data-second-hand></div>
+        <!-- class for the numbers -->
+        <!-- made using enum div.numb.numb$*12{$} -->
+        <!-- adding a seperate div for the text to position them upright -->
+        <div class="number number1"><div style="transform: rotate(-30deg);">1</div></div>
+        <div class="number number2"><div style="transform: rotate(-60deg);">2</div></div>
+        <div class="number number3"><div style="transform: rotate(-90deg);">3</div></div>
+        <div class="number number4"><div style="transform: rotate(-120deg);">4</div></div>
+        <div class="number number5"><div style="transform: rotate(-150deg);">5</div></div>
+        <div class="number number6"><div style="transform: rotate(-180deg);">6</div></div>
+        <div class="number number7"><div style="transform: rotate(-210deg);">7</div></div>
+        <div class="number number8"><div style="transform: rotate(-240deg);">8</div></div>
+        <div class="number number9"><div style="transform: rotate(-270deg);">9</div></div>
+        <div class="number number10"><div style="transform: rotate(-300deg);">10</div></div>
+        <div class="number number11"><div style="transform: rotate(-330deg);">11</div></div>
+        <div class="number number12">12</div>
+    </div>
+</body>
+</html>

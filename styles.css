@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;}
+
+body{
+    background: linear-gradient(to right,#009FFF, #ec2F4B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+
+.clock .number {
+    --rotVar: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 1.5rem;
+    /* background-color: red; */
+    text-align: center;
+    transform: rotate(var(--rotVar));
+}
+/* aligning the numbers co-responding to the angel */
+.clock .number1 {--rotVar: 30deg}
+.clock .number2 {--rotVar: 60deg}
+.clock .number3 {--rotVar: 90deg}
+.clock .number4 {--rotVar: 120deg}
+.clock .number5 {--rotVar: 150deg}
+.clock .number6 {--rotVar: 180deg}
+.clock .number7 {--rotVar: 210deg}
+.clock .number8 {--rotVar: 240deg}
+.clock .number9 {--rotVar: 270deg}
+.clock .number10 {--rotVar: 300deg}
+.clock .number11 {--rotVar: 330deg}
+
+/* hands sections */
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid red;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: black;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotVar) * 1deg));
+    
+}
+
+.clock::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);;
+    border-radius: 30%;
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+    
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: black;
+
+}.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
